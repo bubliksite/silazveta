@@ -1,11 +1,16 @@
-<?
+<?php
 
 /** Перечень стилей и скриптов **/
 function load_style_script () {
-	wp_enqueue_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.css');
-	wp_enqueue_style('style', get_template_directory_uri() . '/css/style.css');
-	wp_enqueue_style('fonts', get_template_directory_uri() . '/css/fonts.css');
-	wp_enqueue_style('slick', get_template_directory_uri() . '/css/slick.css');
+    wp_enqueue_style('bootstrap.min', '//stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css');
+    wp_enqueue_style('owl.carousel.min', get_template_directory_uri() . '/owlcarousel/owl.carousel.min.css');
+    wp_enqueue_style('style', get_template_directory_uri() . '/style.css');
+
+    wp_enqueue_script('jquery-3.4.1.min', '//code.jquery.com/jquery-3.4.1.min.js');
+    wp_enqueue_script('popper.min', '//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js');
+    wp_enqueue_script('bootstrap.min', '//stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js');
+    wp_enqueue_script('script', get_template_directory_uri() . '/js/script.js');
+    wp_enqueue_script('owl.carousel.min', get_template_directory_uri() . '/owlcarousel/owl.carousel.min.js');
 }
 
 /** Загрузка стилей и скриптов **/
@@ -16,3 +21,5 @@ function remove_editor() {
   remove_post_type_support('page', 'editor');
 }
 add_action('admin_init', 'remove_editor');
+
+?>

@@ -10,3 +10,35 @@ Version: 1.0
 Верстка: Сергей Москаленко;
 .
 */
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: 900;
+}
+
+.font-weight-black {
+    font-weight: 900;
+}
+
+.bg-dark-black {
+    background-color: #1F2830;
+}
+
+#main {
+    position: relative;
+}
+
+#main .caption {
+    background-color: rgba(31, 40, 48, 0.9);
+}
+
+@media (min-width: 1200px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 960px;
+    }
+}
