@@ -15,6 +15,7 @@ Version: 1.0
     font-family: 'Montserrat', sans-serif;
     scroll-behavior: smooth;
     transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    color: #000;
 }
 
 h1, h2, h3, h4, h5 {
@@ -29,6 +30,53 @@ h1, h2, h3, h4, h5 {
     background-color: #1F2830;
 }
 
+.bg-gray {
+    background-color: #f2f2f2;
+}
+
+.bg-dark-gray {
+    background-color: #394249;
+}
+
+.btn {
+    border-radius: 10px;
+}
+
+.btn-blue {
+    background-color: #6EBBE7;
+}
+
+.btn-yellow {
+    background-color: #FFB800;
+}
+
+.text-blue {
+    color: #1075ae;
+}
+
+.text-yellow {
+    color: #FFB800;
+}
+
+.blue-circle {
+    border: 3px solid #1075AE;
+    border-radius: 100%;
+}
+
+label {
+    font-size: 14px;
+}
+
+.form-check-input {
+    margin-left: 1.25rem;
+}
+
+.form-group input.form-control, .form-group select.form-control, .form-group .form-check-input {
+    border: transparent;
+    border-radius: 0;
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);
+}
+
 #main {
     position: relative;
 }
@@ -37,8 +85,71 @@ h1, h2, h3, h4, h5 {
     background-color: rgba(31, 40, 48, 0.9);
 }
 
+.owl-carousel .owl-dots {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.owl-carousel button.owl-dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 10px;
+    background-color: #b8b5b5;
+    margin: 0 6px;
+}
+
+.owl-carousel button.owl-dot.active {
+    background-color: #1075AE;
+}
+
+.owl-nav .owl-prev, .owl-nav .owl-next {
+    position: absolute;
+    top: calc(50% - 16px);
+}
+
+.owl-nav .owl-prev:focus, .owl-nav .owl-next:focus, .owl-carousel button.owl-dot:focus {
+    outline: transparent;
+}
+
+.owl-nav .owl-prev {
+    left: -45px;
+}
+
+.owl-nav .owl-next {
+    right: -45px;
+}
+
 @media (min-width: 1200px) {
     .container, .container-lg, .container-md, .container-sm, .container-xl {
         max-width: 960px;
+    }
+}
+
+@media (max-width: 576px) {
+    #main .position-absolute {
+        position: relative !important;
+    }
+
+    #main .caption {
+        width: 100%;
+        padding-right: 10px !important;
+        padding-left: 10px !important;
+    }
+
+    #main .caption h1 {
+        line-height: 100%;
+    }
+
+    #main .caption .btn {
+        margin-top: 0 !important;
+    }
+
+    #main .caption p.lead {
+        font-size: 16px;
+    }
+
+    .px-sm-0 {
+       padding-right: 0 !important;
+        padding-left: 0 !important;
     }
 }

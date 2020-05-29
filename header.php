@@ -14,9 +14,9 @@
 <body>
     <header class="bg-dark-black">
         <div class="container d-flex justify-content-between py-3">
-            <div class="logo">
+            <a class="logo" href="/">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/logo.svg" alt="Логотип">
-            </div>
+            </a>
             <a class="menu text-decoration-none" href="#calculator">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/icon-calc.svg" alt="Рассчитать стоимость">
                 <span class="ml-2 font-weight-bold text-white text-uppercase" style="font-size: 10px">Рассчитать стоимость</span>
