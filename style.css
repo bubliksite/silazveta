@@ -18,6 +18,10 @@ Version: 1.0
     color: #000;
 }
 
+*:focus {
+    outline: transparent;
+}
+
 h1, h2, h3, h4, h5 {
     font-weight: 900;
 }
@@ -40,18 +44,23 @@ h1, h2, h3, h4, h5 {
 
 .btn {
     border-radius: 10px;
+    font-size: 10px;
 }
 
 .btn-blue {
     background-color: #6EBBE7;
 }
 
+.btn-dark-blue {
+    background-color: #1075AE;
+}
+
 .btn-yellow {
     background-color: #FFB800;
 }
 
-.text-blue {
-    color: #1075ae;
+.text-blue, .text-blue p {
+    color: #1075ae !important;
 }
 
 .text-yellow {
@@ -64,17 +73,78 @@ h1, h2, h3, h4, h5 {
 }
 
 label {
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .form-check-input {
     margin-left: 1.25rem;
 }
 
-.form-group input.form-control, .form-group select.form-control, .form-group .form-check-input {
+.form-group input.form-control, .form-group select.form-control, .form-group textarea.form-control {
     border: transparent;
     border-radius: 0;
     box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);
+    font-size: 14px;
+}
+
+.form-group .form-check-input {
+    user-select: none;
+    margin-left: 1rem;
+    width: 30px;
+    height: 30px;
+}
+
+.caldera-grid .form-group input.form-control, .caldera-grid .form-group select.form-control, .caldera-grid .form-group textarea.form-control {
+    box-shadow: none;
+}
+
+.card .form-group .form-check-input {
+    height: 20px;
+    width: 20px;
+}
+
+.form-group .form-check-input::before {
+    content: '';
+    width: 30px;
+    height: 30px;
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);
+    background-color: #fff;
+    display: inline-block;
+}
+
+.card .form-group .form-check-input::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);
+    border: 1px solid #B8B5B5;
+    background-color: #fff;
+    display: inline-block;
+}
+
+.form-group .form-check-input:checked::before {
+    background-image: url("images/icon-check.svg");
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.card {
+    border: none;
+    border-radius: 0;
+    background-color: #fff;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+}
+
+.modal-content {
+    border-radius: 0;
+    border: none;
+    background-color: #f2f2f2;
+    padding: 10px 80px;
+}
+
+.modal-header, .modal-footer {
+    border: none;
 }
 
 #main {
@@ -119,9 +189,26 @@ label {
     right: -45px;
 }
 
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 60vw;
+    }
+}
+
+
 @media (min-width: 1200px) {
     .container, .container-lg, .container-md, .container-sm, .container-xl {
         max-width: 960px;
+    }
+}
+
+@media (max-width: 768px) {
+    #sumCalculator, #sumCalculator .col-md-5 {
+        text-align: center !important;
+    }
+
+    .modal-content {
+        padding: 10px 20px;
     }
 }
 

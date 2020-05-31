@@ -160,45 +160,145 @@ Template Post Type: page
 <section id="calculator" class="bg-gray py-5">
     <div class="container">
         <h2>Сколько стоит покрасить мою кухню?</h2>
+
         <div class="row pt-2">
-            <div class="col-lg-9 row">
-                <div class="col-4 col-md-2">
-                    <div class="form-group">
-                        <label for="width">Ширина фасада, мм</label>
-                        <input type="number" class="form-control" id="width">
-                    </div>
-                </div>
-                <div class="col-4 col-md-2">
-                    <div class="form-group">
-                        <label for="height">Высота фасада, мм</label>
-                        <input type="number" class="form-control" id="height">
-                    </div>
-                </div>
-                <div class="col-4 col-md-2">
-                    <div class="form-group">
-                        <label for="glass" style="min-height: 39px;">Стекло</label>
-                        <select id="glass" class="form-control">
-                            <option value="1">Да</option>
-                            <option value="0">Нет</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="col-4 col-md-2">
-                    <div class="form-group">
-                        <label for="glass" style="min-height: 39px;">Количество</label>
-                        <div class="d-flex">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/icon-minus.svg" alt="">
-                            <input type="text" class="form-control mx-2 px-2" id="height" style="width: 40%;">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/icon-plus.svg" alt="">
+            <div class="col-lg-9">
+                <div id="allFacades">
+                    <div class="row" id="facade-1">
+                        <div class="col-12 justify-content-between d-flex d-sm-flex d-md-none d-lg-none py-2 align-items-center">
+                            <h3 class="text-blue font-weight-bold">Фасад 1</h3>
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/icon-delete-solid.svg" style="width: 25px; height: 25px;" class="removeFacade1">
                         </div>
+                        <div class="col-md-6 col-12">
+                            <div class="row">
+                                <div class="form-group col-4">
+                                    <label for="width" style="height: 39px; display: flex;align-items: center">Ширина фасада, мм</label>
+                                    <input type="number" class="form-control width" id="width">
+                                </div>
+                                <div class="form-group col-4">
+                                    <label for="height" style="height: 39px; display: flex;align-items: center">Высота фасада, мм</label>
+                                    <input type="number" class="form-control height" id="height">
+                                </div>
+                                <div class="form-group col-4">
+                                    <label for="glass" style="height: 39px; display: flex;align-items: center">Стекло</label>
+                                    <select class="form-control glass" id="glass">
+                                        <option value="1">Да</option>
+                                        <option value="0">Нет</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-12">
+                            <div class="row">
+                                <div class="form-group col-4">
+                                    <label for="count" style="height: 39px; display: flex;align-items: center; justify-content: center">
+                                        Количество
+                                    </label>
+                                    <div class="d-flex justify-content-center">
+                                        <img role="button" src="<?php echo get_template_directory_uri(); ?>/images/icon-minus.svg" id="minusFacade1">
+                                        <input type="text" class="form-control mx-2 text-center count count1" id="count" style="width: 40%" min="1" value="1">
+                                        <img role="button" src="<?php echo get_template_directory_uri(); ?>/images/icon-plus.svg" id="plusFacade1">
+                                    </div>
 
+                                </div>
+                                <div class="form-group col">
+                                    <label for="cover">Желаемое <br> покрытие</label>
+                                    <select class="form-control pl-2 pr-1 cover" id="cover">
+                                        <option value="1">Глянец</option>
+                                        <option value="2">Софттач</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-2">
+                                    <label for="paintInside" class="text-center">Красить внутри</label>
+                                    <input class="form-check-input position-static paintInside" type="checkbox" id="paintInside">
+                                </div>
+                                <div class="col-1 col-md-2">
+                                    <div class="d-none d-xs-none d-sm-none d-md-block d-lg-block">
+                                        <label for="count" style="height: 39px; display: flex;align-items: center"></label>
+                                        <div class="d-flex align-items-center justify-content-end mt-3">
+                                            <img role="button" src="<?php echo get_template_directory_uri(); ?>/images/icon-delete-solid.svg" class="removeFacade1">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-3">
 
+                <div class="d-flex justify-content-between mt-3" id="pasteAfter">
+                    <a id="addFacade" role="button" class="btn btn-dark-blue text-white font-weight-bold text-uppercase py-2 px-3" style="font-size: 10px;">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/icon-plus-text.svg" alt="" class="pr-2">
+                        Добавить фасад
+                    </a>
+                    <a role="button" id="removeFacades">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/icon-delete-text.svg" alt="">
+                        <span class="text-uppercase font-weight-bold" style="color: #AE2C10; font-size: 10px; text-decoration: underline;">Удалить всё</span>
+                    </a>
+                </div>
+                <!-- Дублирующийся блок доп. услуг (для мобилки)
+                <div class="col-lg-3 d-block d-xs-block d-sm-block d-md-none d-lg-none pt-4">
+                    <div class="card p-3">
+                        <h6 class="font-weight-bold">Дополнительные услуги (+&nbsp;1500 ₽)</h6>
+                        <a class="text-uppercase" data-toggle="collapse" href="#additionalServices" role="button" aria-expanded="false" aria-controls="additionalServices" style="font-size: .8rem">
+                            <u class="text-blue font-weight-bold">Развернуть</u>
+                        </a>
+                        <div class="collapse" id="additionalServices">
+                            <div class="form-group d-flex align-items-center mb-1">
+                                <input class="form-check-input position-static ml-0 additionalServicesCheckbox" type="checkbox" id="demontazhFasadov" checked="false">
+                                <label for="demontazhFasadov" class="mt-1 ml-2 demontazhFasadov" style="font-size: 11px;">Демонтаж фасадов и фурнитуры (+<span>300</span>₽)</label>
+                            </div>
+                            <div class="form-group d-flex align-items-center mb-1">
+                                <input class="form-check-input position-static ml-0 additionalServicesCheckbox" type="checkbox" id="montazhFasadov">
+                                <label for="montazhFasadov" class="mt-1 ml-2 montazhFasadov" style="font-size: 11px;">Монтаж фасадов и фурнитуры (+<span>300</span>₽)</label>
+                            </div>
+                            <div class="form-group d-flex align-items-center mb-1">
+                                <input class="form-check-input position-static ml-0 additionalServicesCheckbox" type="checkbox" id="dostavkaNaProizvodstvo">
+                                <label for="dostavkaNaProizvodstvo" class="mt-1 ml-2 dostavkaNaProizvodstvo" style="font-size: 11px;">Доставка на производство (+<span>1500</span>₽)</label>
+                            </div>
+                            <div class="form-group d-flex align-items-center mb-1">
+                                <input class="form-check-input position-static ml-0 additionalServicesCheckbox" type="checkbox" id="dostavkaSProizvodstva">
+                                <label for="dostavkaSProizvodstva" class="mt-1 ml-2 dostavkaSProizvodstva" style="font-size: 11px;">Доставка с производства (+<span>1500</span>₽)</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+
+                <hr class="mt-5 mb-3">
+                <div class="row order-2" id="sumCalculator">
+                    <div class="col-md-7">
+                        <h1 class="font-weight-bold">13 000 ₽</h1>
+                        <p>Это ориентировочная цена. Для того, чтобы получить точный расчёт, свяжитесь с нами</p>
+                    </div>
+                    <div class="col-md-5 text-right">
+                        <a href="" class="btn btn-yellow py-3 px-4 text-uppercase font-weight-bold" style="font-size: 10px;" data-toggle="modal" data-target="#askPriceModal">Уточнить цену</a>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Дублирующийся блок доп. услуг (для десткопа) -->
+            <div class="col-lg-3 order-1 d-none d-xs-none d-sm-none d-md-block d-lg-block" id="additionalServices">
+                <div class="card p-3">
+                    <h6 class="font-weight-bold" id="additionalSum">Дополнительные услуги (+&nbsp;<span>0</span> ₽)</h6>
+                    <div class="form-group d-flex align-items-center mb-1">
+                        <input class="form-check-input position-static ml-0 additionalServicesCheckbox" type="checkbox" id="demontazhFasadov">
+                        <label for="demontazhFasadov" class="mt-1 ml-2 demontazhFasadov" style="font-size: 11px;">Демонтаж фасадов и фурнитуры (+<span>300</span>₽)</label>
+                    </div>
+                    <div class="form-group d-flex align-items-center mb-1">
+                        <input class="form-check-input position-static ml-0 additionalServicesCheckbox" type="checkbox" id="montazhFasadov">
+                        <label for="montazhFasadov" class="mt-1 ml-2 montazhFasadov" style="font-size: 11px;">Монтаж фасадов и фурнитуры (+<span>300</span>₽)</label>
+                    </div>
+                    <div class="form-group d-flex align-items-center mb-1">
+                        <input class="form-check-input position-static ml-0 additionalServicesCheckbox" type="checkbox" id="dostavkaNaProizvodstvo">
+                        <label for="dostavkaNaProizvodstvo" class="mt-1 ml-2 dostavkaNaProizvodstvo" style="font-size: 11px;">Доставка на производство (+<span>1500</span>₽)</label>
+                    </div>
+                    <div class="form-group d-flex align-items-center mb-1">
+                        <input class="form-check-input position-static ml-0 additionalServicesCheckbox" type="checkbox" id="dostavkaSProizvodstva">
+                        <label for="dostavkaSProizvodstva" class="mt-1 ml-2 dostavkaSProizvodstva" style="font-size: 11px;">Доставка с производства (+<span>1500</span>₽)</label>
+                    </div>
+                </div>
             </div>
         </div>
+
     </div>
 </section>
 <section class="py-5">
@@ -229,7 +329,7 @@ Template Post Type: page
     <p class="m-0">Можете позвонить нам по телефону</p>
     <a href="tel: +7 (812) 309 38 92" class="text-decoration-none"><h2 class="text-blue font-weight-bold py-1 m-0">+7 (812) 309 38 92</h2></a>
     <p class="m-0">или закажите обратный звонок</p>
-    <a href="" class="btn btn-yellow mt-3 mb-4 px-5 py-3 text-uppercase font-weight-bold" style="font-size: 10px;">Позвоните мне</a>
+    <a href="" class="btn btn-yellow mt-3 mb-4 px-5 py-3 text-uppercase font-weight-bold" style="font-size: 10px;" data-toggle="modal" data-target="#callBackModal">Позвоните мне</a>
 </section>
 
 <?php get_footer(); ?>

@@ -2,7 +2,7 @@
 
 /** Перечень стилей и скриптов **/
 function load_style_script () {
-    wp_enqueue_style('bootstrap.min', '//stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css');
+    wp_enqueue_style('bootstrap.min', '//stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css');
     wp_enqueue_style('owl.carousel.min', get_template_directory_uri() . '/owlcarousel/owl.carousel.min.css');
     wp_enqueue_style('style', get_template_directory_uri() . '/style.css');
 
