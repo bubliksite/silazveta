@@ -191,7 +191,7 @@ label {
 
 @media (min-width: 576px) {
     .modal-dialog {
-        max-width: 60vw;
+        max-width: 860px;
     }
 }
 

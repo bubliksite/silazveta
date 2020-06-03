@@ -172,18 +172,18 @@ Template Post Type: page
                         <div class="col-md-6 col-12">
                             <div class="row">
                                 <div class="form-group col-4">
-                                    <label for="width" style="height: 39px; display: flex;align-items: center">Ширина фасада, мм</label>
-                                    <input type="number" class="form-control width" id="width">
+                                    <label for="width1" style="height: 39px; display: flex;align-items: center">Ширина фасада, мм</label>
+                                    <input type="number" class="form-control width width1" id="width1">
                                 </div>
                                 <div class="form-group col-4">
-                                    <label for="height" style="height: 39px; display: flex;align-items: center">Высота фасада, мм</label>
-                                    <input type="number" class="form-control height" id="height">
+                                    <label for="height1" style="height: 39px; display: flex;align-items: center">Высота фасада, мм</label>
+                                    <input type="number" class="form-control height height1" id="height1">
                                 </div>
                                 <div class="form-group col-4">
-                                    <label for="glass" style="height: 39px; display: flex;align-items: center">Стекло</label>
-                                    <select class="form-control glass" id="glass">
-                                        <option value="1">Да</option>
-                                        <option value="0">Нет</option>
+                                    <label for="glass1" style="height: 39px; display: flex;align-items: center">Стекло</label>
+                                    <select class="form-control glass glass1" id="glass1">
+                                        <option value="1.2">Да</option>
+                                        <option value="1">Нет</option>
                                     </select>
                                 </div>
                             </div>
@@ -196,21 +196,22 @@ Template Post Type: page
                                     </label>
                                     <div class="d-flex justify-content-center">
                                         <img role="button" src="<?php echo get_template_directory_uri(); ?>/images/icon-minus.svg" id="minusFacade1">
-                                        <input type="text" class="form-control mx-2 text-center count count1" id="count" style="width: 40%" min="1" value="1">
+                                        <input type="text" class="form-control mx-2 text-center count count1" id="count1" style="width: 40%" min="1" value="1" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
                                         <img role="button" src="<?php echo get_template_directory_uri(); ?>/images/icon-plus.svg" id="plusFacade1">
                                     </div>
 
                                 </div>
                                 <div class="form-group col">
-                                    <label for="cover">Желаемое <br> покрытие</label>
-                                    <select class="form-control pl-2 pr-1 cover" id="cover">
-                                        <option value="1">Глянец</option>
-                                        <option value="2">Софттач</option>
+                                    <label for="cover1">Желаемое <br> покрытие</label>
+                                    <select class="form-control pl-2 pr-1 cover cover1" id="cover1">
+                                        <option value="1.5">Глянец</option>
+                                        <option value="1">Матовое</option>
+                                        <option value="1.3">Софттач</option>
                                     </select>
                                 </div>
                                 <div class="form-group col-2">
-                                    <label for="paintInside" class="text-center">Красить внутри</label>
-                                    <input class="form-check-input position-static paintInside" type="checkbox" id="paintInside">
+                                    <label for="paintInside1" class="text-center">Красить внутри</label>
+                                    <input class="form-check-input position-static paintInside1 paintInside" type="checkbox" id="paintInside1">
                                 </div>
                                 <div class="col-1 col-md-2">
                                     <div class="d-none d-xs-none d-sm-none d-md-block d-lg-block">
@@ -220,6 +221,7 @@ Template Post Type: page
                                         </div>
                                     </div>
                                 </div>
+                                <input type="text" class="d-none total total1" id="total1" value="0">
                             </div>
                         </div>
                     </div>
@@ -235,42 +237,42 @@ Template Post Type: page
                         <span class="text-uppercase font-weight-bold" style="color: #AE2C10; font-size: 10px; text-decoration: underline;">Удалить всё</span>
                     </a>
                 </div>
-                <!-- Дублирующийся блок доп. услуг (для мобилки)
+                <!-- Дублирующийся блок доп. услуг (для мобилки)-->
                 <div class="col-lg-3 d-block d-xs-block d-sm-block d-md-none d-lg-none pt-4">
                     <div class="card p-3">
-                        <h6 class="font-weight-bold">Дополнительные услуги (+&nbsp;1500 ₽)</h6>
+                        <h6 class="font-weight-bold" id="additionalSumMob">Дополнительные услуги (+&nbsp;<span>0</span> ₽)</h6>
                         <a class="text-uppercase" data-toggle="collapse" href="#additionalServices" role="button" aria-expanded="false" aria-controls="additionalServices" style="font-size: .8rem">
                             <u class="text-blue font-weight-bold">Развернуть</u>
                         </a>
                         <div class="collapse" id="additionalServices">
                             <div class="form-group d-flex align-items-center mb-1">
-                                <input class="form-check-input position-static ml-0 additionalServicesCheckbox" type="checkbox" id="demontazhFasadov" checked="false">
-                                <label for="demontazhFasadov" class="mt-1 ml-2 demontazhFasadov" style="font-size: 11px;">Демонтаж фасадов и фурнитуры (+<span>300</span>₽)</label>
+                                <input class="form-check-input position-static ml-0 additionalServicesCheckbox" type="checkbox" id="demontazhFasadovMob">
+                                <label for="demontazhFasadovMob" class="mt-1 ml-2 demontazhFasadovMob" style="font-size: 11px;">Демонтаж фасадов и фурнитуры (+<span>300</span>₽)</label>
                             </div>
                             <div class="form-group d-flex align-items-center mb-1">
-                                <input class="form-check-input position-static ml-0 additionalServicesCheckbox" type="checkbox" id="montazhFasadov">
-                                <label for="montazhFasadov" class="mt-1 ml-2 montazhFasadov" style="font-size: 11px;">Монтаж фасадов и фурнитуры (+<span>300</span>₽)</label>
+                                <input class="form-check-input position-static ml-0 additionalServicesCheckbox" type="checkbox" id="montazhFasadovMob">
+                                <label for="montazhFasadovMob" class="mt-1 ml-2 montazhFasadovMob" style="font-size: 11px;">Монтаж фасадов и фурнитуры (+<span>300</span>₽)</label>
                             </div>
                             <div class="form-group d-flex align-items-center mb-1">
-                                <input class="form-check-input position-static ml-0 additionalServicesCheckbox" type="checkbox" id="dostavkaNaProizvodstvo">
-                                <label for="dostavkaNaProizvodstvo" class="mt-1 ml-2 dostavkaNaProizvodstvo" style="font-size: 11px;">Доставка на производство (+<span>1500</span>₽)</label>
+                                <input class="form-check-input position-static ml-0 additionalServicesCheckbox" type="checkbox" id="dostavkaNaProizvodstvoMob">
+                                <label for="dostavkaNaProizvodstvoMob" class="mt-1 ml-2 dostavkaNaProizvodstvoMob" style="font-size: 11px;">Доставка на производство (+<span>1500</span>₽)</label>
                             </div>
                             <div class="form-group d-flex align-items-center mb-1">
-                                <input class="form-check-input position-static ml-0 additionalServicesCheckbox" type="checkbox" id="dostavkaSProizvodstva">
-                                <label for="dostavkaSProizvodstva" class="mt-1 ml-2 dostavkaSProizvodstva" style="font-size: 11px;">Доставка с производства (+<span>1500</span>₽)</label>
+                                <input class="form-check-input position-static ml-0 additionalServicesCheckbox" type="checkbox" id="dostavkaSProizvodstvaMob">
+                                <label for="dostavkaSProizvodstvaMob" class="mt-1 ml-2 dostavkaSProizvodstvaMob" style="font-size: 11px;">Доставка с производства (+<span>1500</span>₽)</label>
                             </div>
                         </div>
                     </div>
-                </div>-->
+                </div>
 
                 <hr class="mt-5 mb-3">
                 <div class="row order-2" id="sumCalculator">
                     <div class="col-md-7">
-                        <h1 class="font-weight-bold">13 000 ₽</h1>
+                        <h1 class="font-weight-bold" id="totalPrice"><span>0</span> ₽</h1>
                         <p>Это ориентировочная цена. Для того, чтобы получить точный расчёт, свяжитесь с нами</p>
                     </div>
                     <div class="col-md-5 text-right">
-                        <a href="" class="btn btn-yellow py-3 px-4 text-uppercase font-weight-bold" style="font-size: 10px;" data-toggle="modal" data-target="#askPriceModal">Уточнить цену</a>
+                        <a id="sendPrice" href="" class="btn btn-yellow py-3 px-4 text-uppercase font-weight-bold" style="font-size: 10px;" data-toggle="modal" data-target="#askPriceModal">Уточнить цену</a>
                     </div>
                 </div>
 
