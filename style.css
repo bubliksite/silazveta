@@ -101,8 +101,8 @@ label {
 .card .form-group .form-check-input {
     height: 15px;
     width: 15px;
-    padding-top: 3px;
-    padding-left: 3px;
+    margin-top: 3px;
+    margin-left: 3px;
 }
 
 .form-group .form-check-input::before {
