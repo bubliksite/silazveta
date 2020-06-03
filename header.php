@@ -12,7 +12,7 @@
     <?php wp_head(); ?>
 </head>
 <body>
-    <header class="bg-dark-black">
+    <header class="bg-dark-black px-3">
         <div class="container d-flex justify-content-between py-3">
             <a class="logo" href="/">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/logo.svg" alt="Логотип">

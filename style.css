@@ -99,8 +99,10 @@ label {
 }
 
 .card .form-group .form-check-input {
-    height: 20px;
-    width: 20px;
+    height: 15px;
+    width: 15px;
+    padding-top: 3px;
+    padding-left: 3px;
 }
 
 .form-group .form-check-input::before {

@@ -1,6 +1,6 @@
 <?php wp_footer(); ?>
 
-<footer class="bg-dark-gray py-4">
+<footer class="bg-dark-gray py-4 px-3">
     <div class="container">
         <div class="d-flex justify-content-between">
             <p class="text-white mb-0 pb-0">© Сила цвета</p>

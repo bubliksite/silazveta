@@ -38,7 +38,7 @@ Template Post Type: page
 </section>
 <section id="description" class="pb-5">
     <div class="container">
-        <div class="row">
+        <div class="row pl-3">
             <div class="col-md-6 pt-5">
                 <h3 class="pb-3">
                     Ваша кухня устарела и&nbsp;потерлась, а&nbsp;менять ее&nbsp;— дорого?
@@ -121,13 +121,13 @@ Template Post Type: page
         </div>
     </div>
 </section>
-<section class="pt-5">
+<section class="pt-5 px-3">
     <div class="container">
         <h1><span class="text-yellow">Красим</span> капризные поверхности уже&nbsp;7&nbsp;лет!</h1>
         <p class="py-5 px-0 col-md-9 col-12">
             Сила Цвета — новое подразделение компании <a href="//krasimokna.ru">КрасимОкна</a>. Мы покрасили более 5000
             погонных метров пластика, ламинированного ДСП и&nbsp;других сложных для&nbsp;окраски поверхностей. Нам&nbsp;
-            доверяют (НАЗВАНИЯ КЛИЕНТОВ)
+            доверяют РОСБАНК, Макдональдс и Бургер Кинг.
         </p>
         <div class="row">
             <div class="col-md-5 d-flex align-items-center mb-5">
@@ -157,7 +157,7 @@ Template Post Type: page
         </div>
     </div>
 </section>
-<section id="calculator" class="bg-gray py-5">
+<section id="calculator" class="bg-gray py-5 px-3">
     <div class="container">
         <h2>Сколько стоит покрасить мою кухню?</h2>
 
@@ -303,7 +303,7 @@ Template Post Type: page
 
     </div>
 </section>
-<section class="py-5">
+<section class="py-5 px-3">
     <div class="container">
         <h2>Цена устраивает, что дальше?</h2>
         <div class="row pt-3">
