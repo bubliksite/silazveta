@@ -85,19 +85,11 @@
     }
 
     function montazhDemontazh() {
-        $('.demontazhFasadov').find('span').text(300*sumFacades)
-        $('.montazhFasadov').find('span').text(300*sumFacades)
-        if (sumFacades === 0) {
-            $('#additionalSum').find('span').text(0)
-        }
+
     }
 
     function montazhDemontazhMob() {
-        $('.demontazhFasadovMob').find('span').text(300*sumFacades)
-        $('.montazhFasadovMob').find('span').text(300*sumFacades)
-        if (sumFacades === 0) {
-            $('#additionalSumMob').find('span').text(0)
-        }
+
     }
 
     function sumOfAdditionalServices() {
@@ -211,8 +203,8 @@
             '                                <div class="form-group col-4">\n' +
             '                                    <label for="glass' + facadeIterator + '" style="height: 39px; display: flex;align-items: center">Стекло</label>\n' +
             '                                    <select class="form-control glass glass' + facadeIterator + '" id="glass' + facadeIterator + '">\n' +
-            '                                        <option value="1.2">Да</option>\n' +
             '                                        <option value="1">Нет</option>\n' +
+            '                                        <option value="1.2">Да</option>\n' +
             '                                    </select>\n' +
             '                                </div>\n' +
             '                            </div>\n' +

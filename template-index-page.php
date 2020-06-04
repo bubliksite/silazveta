@@ -125,7 +125,7 @@ Template Post Type: page
     <div class="container">
         <h1><span class="text-yellow">Красим</span> капризные поверхности уже&nbsp;7&nbsp;лет!</h1>
         <p class="py-5 px-0 col-md-9 col-12">
-            Сила Цвета — новое подразделение компании <a href="//krasimokna.ru">КрасимОкна</a>. Мы покрасили более 5000
+            Сила Цвета — новое подразделение компании <a href="//krasimokna.ru">КрасимОкна</a>. Мы покрасили более 100&nbsp;000
             погонных метров пластика, ламинированного ДСП и&nbsp;других сложных для&nbsp;окраски поверхностей. Нам&nbsp;
             доверяют РОСБАНК, Макдональдс и Бургер Кинг.
         </p>
@@ -182,8 +182,8 @@ Template Post Type: page
                                 <div class="form-group col-4">
                                     <label for="glass1" style="height: 39px; display: flex;align-items: center">Стекло</label>
                                     <select class="form-control glass glass1" id="glass1">
-                                        <option value="1.2">Да</option>
                                         <option value="1">Нет</option>
+                                        <option value="1.2">Да</option>
                                     </select>
                                 </div>
                             </div>
