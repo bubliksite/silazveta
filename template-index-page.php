@@ -183,7 +183,7 @@ Template Post Type: page
                                     <label for="glass1" style="height: 39px; display: flex;align-items: center">Стекло</label>
                                     <select class="form-control glass glass1" id="glass1">
                                         <option value="1">Нет</option>
-                                        <option value="1.2">Да</option>
+                                        <option value="1.3">Да</option>
                                     </select>
                                 </div>
                             </div>
@@ -204,9 +204,9 @@ Template Post Type: page
                                 <div class="form-group col">
                                     <label for="cover1">Желаемое <br> покрытие</label>
                                     <select class="form-control pl-2 pr-1 cover cover1" id="cover1">
-                                        <option value="1.5">Глянец</option>
+                                        <option value="1.7">Глянец</option>
                                         <option value="1">Матовое</option>
-                                        <option value="1.3">Софттач</option>
+                                        <option value="1.5">Софттач</option>
                                     </select>
                                 </div>
                                 <div class="form-group col-2">

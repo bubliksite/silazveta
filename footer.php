@@ -204,7 +204,7 @@
             '                                    <label for="glass' + facadeIterator + '" style="height: 39px; display: flex;align-items: center">Стекло</label>\n' +
             '                                    <select class="form-control glass glass' + facadeIterator + '" id="glass' + facadeIterator + '">\n' +
             '                                        <option value="1">Нет</option>\n' +
-            '                                        <option value="1.2">Да</option>\n' +
+            '                                        <option value="1.3">Да</option>\n' +
             '                                    </select>\n' +
             '                                </div>\n' +
             '                            </div>\n' +
@@ -224,9 +224,9 @@
             '                                <div class="form-group col">\n' +
             '                                    <label for="cover' + facadeIterator + '">Желаемое <br> покрытие</label>\n' +
             '                                    <select class="form-control pl-2 pr-1 cover cover' + facadeIterator + '" id="cover' + facadeIterator + '">\n' +
-            '                                        <option value="1.5">Глянец</option>\n' +
+            '                                        <option value="1.7">Глянец</option>\n' +
             '                                        <option value="1">Матовое</option>\n' +
-            '                                        <option value="1.3">Софттач</option>\n' +
+            '                                        <option value="1.5">Софттач</option>\n' +
             '                                    </select>\n' +
             '                                </div>\n' +
             '                                <div class="form-group col-2">\n' +
