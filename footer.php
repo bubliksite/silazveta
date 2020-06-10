@@ -193,15 +193,15 @@
             '                        <div class="col-md-6 col-12">\n' +
             '                            <div class="row">\n' +
             '                                <div class="form-group col-4">\n' +
-            '                                    <label for="width' + facadeIterator + '" style="height: 39px; display: flex;align-items: center">Ширина фасада, мм</label>\n' +
+            '                                    <label class="d-block d-xs-block d-sm-block d-md-none d-lg-none" for="width' + facadeIterator + '" style="height: 39px; display: flex;align-items: center">Ширина фасада, мм</label>\n' +
             '                                    <input type="number" class="form-control width width' + facadeIterator + '" id="width' + facadeIterator + '">\n' +
             '                                </div>\n' +
             '                                <div class="form-group col-4">\n' +
-            '                                    <label for="height' + facadeIterator + '" style="height: 39px; display: flex;align-items: center">Высота фасада, мм</label>\n' +
+            '                                    <label class="d-block d-xs-block d-sm-block d-md-none d-lg-none" for="height' + facadeIterator + '" style="height: 39px; display: flex;align-items: center">Высота фасада, мм</label>\n' +
             '                                    <input type="number" class="form-control height height' + facadeIterator + '" id="height' + facadeIterator + '">\n' +
             '                                </div>\n' +
             '                                <div class="form-group col-4">\n' +
-            '                                    <label for="glass' + facadeIterator + '" style="height: 39px; display: flex;align-items: center">Стекло</label>\n' +
+            '                                    <label class="d-block d-xs-block d-sm-block d-md-none d-lg-none" for="glass' + facadeIterator + '" style="height: 39px; display: flex;align-items: center">Стекло</label>\n' +
             '                                    <select class="form-control glass glass' + facadeIterator + '" id="glass' + facadeIterator + '">\n' +
             '                                        <option value="1">Нет</option>\n' +
             '                                        <option value="1.3">Да</option>\n' +
@@ -212,7 +212,7 @@
             '                        <div class="col-md-6 col-12">\n' +
             '                            <div class="row">\n' +
             '                                <div class="form-group col-4">\n' +
-            '                                    <label for="count" style="height: 39px; display: flex;align-items: center; justify-content: center">\n' +
+            '                                    <label class="d-block d-xs-block d-sm-block d-md-none d-lg-none" for="count" style="height: 39px; display: flex;align-items: center; justify-content: center">\n' +
             '                                        Количество\n' +
             '                                    </label>\n' +
             '                                    <div class="d-flex justify-content-center">\n' +
@@ -222,7 +222,7 @@
             '                                    </div>\n' +
             '                                </div>\n' +
             '                                <div class="form-group col">\n' +
-            '                                    <label for="cover' + facadeIterator + '">Желаемое <br> покрытие</label>\n' +
+            '                                    <label class="d-block d-xs-block d-sm-block d-md-none d-lg-none" for="cover' + facadeIterator + '">Желаемое <br> покрытие</label>\n' +
             '                                    <select class="form-control pl-2 pr-1 cover cover' + facadeIterator + '" id="cover' + facadeIterator + '">\n' +
             '                                        <option value="1.7">Глянец</option>\n' +
             '                                        <option value="1">Матовое</option>\n' +
@@ -230,13 +230,13 @@
             '                                    </select>\n' +
             '                                </div>\n' +
             '                                <div class="form-group col-2">\n' +
-            '                                    <label for="paintInside' + facadeIterator + '" class="text-center">Красить внутри</label>\n' +
+            '                                    <label class="d-block d-xs-block d-sm-block d-md-none d-lg-none" for="paintInside' + facadeIterator + '" class="text-center">Красить внутри</label>\n' +
             '                                    <input class="form-check-input position-static paintInside paintInside' + facadeIterator + '" type="checkbox" id="paintInside' + facadeIterator + '">\n' +
             '                                </div>\n' +
             '                                <div class="col-1 col-md-2">\n' +
             '                                    <div class="d-none d-xs-none d-sm-none d-md-block d-lg-block">\n' +
-            '                                        <label for="count" style="height: 39px; display: flex;align-items: center"></label>\n' +
-            '                                        <div class="d-flex align-items-center justify-content-end mt-3">\n' +
+            '                                        <label class="d-block d-xs-block d-sm-block d-md-none d-lg-none" for="count" style="height: 39px; display: flex;align-items: center"></label>\n' +
+            '                                        <div class="d-flex align-items-center justify-content-end mt-2">\n' +
             '                                            <img role="button" src="<?php echo get_template_directory_uri(); ?>/images/icon-delete-solid.svg" alt="" class="removeFacade' + facadeIterator + '">\n' +
             '                                        </div>\n' +
             '                                       <input type="text" class="d-none total total' + facadeIterator + '" id="total' + facadeIterator + '" value="0">' +
