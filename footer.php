@@ -54,6 +54,18 @@
     </div>
 </div>
 
+<?php $get = $_GET["cf_su"] ?>
+<?php echo $get  ?>
+<?php if ($get == 1) : ?>
+    <script>
+        $('#callBackModal').modal('show')
+    </script>
+<?php elseif ($get == 2) :?>
+    <script>
+        $('#askPriceModal').modal('show')
+    </script>
+<?php endif ?>
+
 <script>
     $(document).ready(function(){
         $(".owl-carousel").owlCarousel({
