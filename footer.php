@@ -4,7 +4,7 @@
     <div class="container">
         <div class="d-flex justify-content-between">
             <p class="text-white mb-0 pb-0">© Сила цвета</p>
-            <a href="mailto: Info@krasimokna.ru" class="text-yellow text-decoration-none mb-0 pb-0">Info@krasimokna.ru</a>
+            <a href="mailto: Info@silazveta.ru" class="text-yellow text-decoration-none mb-0 pb-0">Info@silazveta.ru</a>
         </div>
     </div>
 </footer>
