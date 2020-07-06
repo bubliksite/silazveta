@@ -204,8 +204,8 @@ Template Post Type: page
                                 <div class="form-group col">
                                     <label for="cover1">Желаемое <br> покрытие</label>
                                     <select class="form-control pl-2 pr-1 cover cover1" id="cover1">
-                                        <option value="1.7">Глянец</option>
                                         <option value="1">Матовое</option>
+                                        <option value="1.7">Глянец</option>
                                         <option value="1.5">Софттач</option>
                                     </select>
                                 </div>
